@@ -1,0 +1,46 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "express app serve as backend to react admin tutorial",
+  "keywords": [
+    "react-admin",
+    "express",
+    "node",
+    "typescript"
+  ],
+  "homepage": "https://github.com/jadogeri/react-admin-tutorial#readme",
+  "bugs": {
+    "url": "https://github.com/jadogeri/react-admin-tutorial/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadogeri/react-admin-tutorial.git"
+  },
+  "license": "MIT",
+  "author": "Joseph Adogeri",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/server.js",
+    "dev": "tsx watch src/index.ts ",
+    "build": "tsc",
+    "serve": "node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.3",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.1.2"
+  }
+}

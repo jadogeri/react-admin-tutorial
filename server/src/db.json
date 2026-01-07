@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Klaus Huntelaar",
+      "username": "Kanaar",
+      "email": "applboss@gmail.com",
+      "phone": 37802223,
+      "company": "Hunters Mobile Co."
+    },
+    {
+      "id": "2",
+      "name": "Peggy Sonaya",
+      "username": "Peggaya",
+      "email": "sonayapeg@gmail.com",
+      "phone": 4402673,
+      "company": "Peggy's Drycleaning"
+    },
+    {
+      "id": "3",
+      "name": "Joseph Maguire",
+      "username": "Joemag",
+      "email": "Jojo1956@gmail.com",
+      "phone": 224423045,
+      "company": "Jojo's Pot"
+    },
+    {
+      "id": "4",
+      "name": "Jon Hanus",
+      "username": "Hanuson",
+      "email": "Joehanus11@gmail.com",
+      "phone": 89354033,
+      "company": "Joe's Funeral Home"
+    },
+    {
+      "id": "5",
+      "name": "Ron Burgundy",
+      "username": "Colorburgundy",
+      "email": "Rongundy@gmail.com",
+      "phone": 23455,
+      "company": "Color Burgundy"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "Post One",
+      "body": "This is post one",
+      "publishedAt": "2019-08-01",
+      "userId": "2"
+    },
+    {
+      "id": "2",
+      "title": "Post Two",
+      "body": "This is post two",
+      "publishedAt": "2011-06-27",
+      "userId": "1"
+    },
+    {
+      "id": "3",
+      "title": "Post Three",
+      "body": "This is post three",
+      "publishedAt": "2021-12-14",
+      "userId": "4"
+    }
+  ]
+}

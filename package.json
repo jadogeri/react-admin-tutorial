@@ -1,0 +1,30 @@
+{
+  "name": "react-admin-tutorial",
+  "version": "1.0.0",
+  "description": "starter for frontend and backend",
+  "homepage": "https://github.com/jadogeri/react-admin-tutorial#readme",
+  "bugs": {
+    "url": "https://github.com/jadogeri/react-admin-tutorial/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadogeri/react-admin-tutorial.git"
+  },
+  "license": "MIT",
+  "author": "Joseph Adogeri",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "app": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "json-server": "^1.0.0-beta.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19"
+  }
+}
