@@ -2,11 +2,14 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "NodeNext",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "moduleResolution": "NodeNext",
     "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+   "strictPropertyInitialization": false, 
     "skipLibCheck": true,
     "sourceMap": true
   },

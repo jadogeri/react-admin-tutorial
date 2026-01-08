@@ -10,5 +10,5 @@ export const corsOptions: CorsOptions = {
   credentials: true, // Set to true if you need to include cookies in CORS requests
   exposedHeaders: ['Content-Range', 'X-Total-Count'], // Required for React-admin pagination
   allowedHeaders: ['Content-Type', 'Authorization','*'], // Specify allowed headers
-  optionsSuccessStatus: 200 
+  optionsSuccessStatus: 200,
 };

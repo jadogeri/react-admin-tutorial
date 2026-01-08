@@ -1,35 +1,64 @@
+import "reflect-metadata"; 
 import express, {Application, NextFunction, Request, Response} from 'express';
-import { corsOptions } from './cors.config.js';
+import { corsOptions } from './cors.config';
 import { CorsOptions } from 'cors';
-import router from './user.controller.js';
-import cors from 'cors';
-import mongoose from 'mongoose';
-import path from 'path';
+// Must be the first line of the file
 
+import cors from 'cors';
+import path from 'path';
+import { AppDataSource } from './data-source';
+import { UserController } from './user/user.controller';
+import { range } from "./range";
+import PostController from "./post/post.controller";
 
 const app: Application= express();
 const PORT = process.env.PORT || 4000;
 
-app.use(cors(corsOptions))
-app.use(cors({ origin: '*' }));
-// app.options('*', cors(corsOptions)); // Enable pre-flight for all routes
-app.use(express.json());
-// Connect to MongoDB (ensure your instance is running)
-mongoose.connect('mongodb://localhost:27017/userdb')
-  .then(() => console.log('Connected to MongoDB'))
-  .catch(err => console.error(err));
-app.use(express.urlencoded({ extended: true }));
 
-app.use('/users', router);
-const buildPath = path.join(import.meta.dirname, '../..', 'client', 'build');  console.log('Build Path:', buildPath);
-  app.use(express.static(buildPath));
-  
-//app.use(range);
+// Establish database connection
+AppDataSource.initialize()
+    .then(() => {
+        console.log("Data Source has been initialized!");
 
-app.get('/home', (req: Request, res: Response) => {
-  res.send('Hello World from Express with TypeScript and ESM!');
-});
+        app.use(express.json());
 
-app.listen(PORT, () => {
-  console.log(`Server is running on [http://localhost:${PORT}](http://localhost:4000)`);
-});
+        app.use(cors(corsOptions))
+        app.use(cors({ origin: '*' }));
+        app.use(range)
+        // app.options('*', cors(corsOptions)); // Enable pre-flight for all routes
+
+        //app.use(range);
+
+        // Define routes
+        const userController = new UserController();
+        app.get('/home', (req: Request, res: Response) => {
+          res.send('Hello World from Express with TypeScript and ESM!');
+        });        
+
+        // Define user routes
+        app.get("/users", userController.all);
+        app.get("/users/:id", userController.one);
+        app.post("/users", userController.save);
+        app.post("/users/load", userController.load);
+        app.put("/users/:id", userController.update);
+        app.delete("/users/:id", userController.remove);
+        app.delete("/users/truncate", userController.truncate);
+        // Define post routes
+        const postController = new PostController();
+        app.get("/posts", postController.all);
+        app.get("/posts/:id", postController.one);
+        app.post("/posts", postController.save);
+        app.post("/posts/load", postController.load);
+        app.put("/posts/:id", postController.update);
+        app.delete("/posts/:id", postController.remove);
+        app.delete("/posts/truncate", postController.truncate);
+        // Serve static files from the React app
+        const buildPath = path.join(__dirname, '../..', 'client', 'build');  console.log('Build Path:', buildPath);
+        app.use(express.static(buildPath));   
+
+
+        app.listen(4000, () => {
+            console.log("Server is running on http://localhost:4000");
+        });
+    })
+    .catch((error) => console.error("Error during Data Source initialization:", error));
