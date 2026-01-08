@@ -11,7 +11,7 @@ export class Post {
     @Column({ type: "varchar", length: 300, unique: false, default: "" })
     body: string;
 
-    @Column({ type: "date" })
+    @Column({ type: "datetime" })
     publishedAt: Date;
 
     // 1. Manually add this column to store the ID
