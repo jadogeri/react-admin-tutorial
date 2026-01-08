@@ -27,6 +27,7 @@ AppDataSource.initialize()
         app.use(cors({ origin: '*' }));
         app.use(userRange);
         app.use(postRange);
+        app.use(cors({ exposedHeaders: ['Content-Range'] }));
         // app.options('*', cors(corsOptions)); // Enable pre-flight for all routes
 
         //app.use(range);
