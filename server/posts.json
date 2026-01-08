@@ -3,105 +3,105 @@
         "id": 1,
         "title": "malesuada id,",
         "body": "Suspendisse non leo. Vivamus nibh dolor,",
-        "publishedAt": "2024-10-25 08:38:19",
+        "publishedAt": "2024-10-25",
         "userId": 7
     },
     {
         "id": 2,
         "title": "sed leo. Cras",
         "body": "Curabitur ut odio vel est tempor bibendum. Donec felis orci, adipiscing non, luctus",
-        "publishedAt": "2024-11-21 15:24:30",
+        "publishedAt": "2024-11-21",
         "userId": 8
     },
     {
         "id": 3,
         "title": "lorem eu",
         "body": "vulputate ullamcorper magna. Sed eu eros. Nam consequat dolor vitae dolor. Donec fringilla. Donec feugiat",
-        "publishedAt": "2025-03-05 17:09:07",
+        "publishedAt": "2025-03-05",
         "userId": 24
     },
     {
         "id": 4,
         "title": "Quisque purus",
         "body": "venenatis a, magna. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam laoreet, libero et tristique pellentesque, tellus sem mollis dui, in",
-        "publishedAt": "2024-10-19 18:22:21",
+        "publishedAt": "2024-10-19",
         "userId": 3
     },
     {
         "id": 5,
         "title": "Cras eget",
         "body": "varius ultrices, mauris ipsum porta elit, a feugiat tellus lorem eu metus. In lorem. Donec elementum, lorem ut aliquam iaculis, lacus pede",
-        "publishedAt": "2025-07-08 15:09:47",
+        "publishedAt": "2025-07-08",
         "userId": 14
     },
     {
         "id": 6,
         "title": "nascetur ridiculus",
         "body": "malesuada ut, sem. Nulla interdum. Curabitur dictum. Phasellus",
-        "publishedAt": "2026-10-22 17:09:39",
+        "publishedAt": "2026-10-22",
         "userId": 21
     },
     {
         "id": 7,
         "title": "mi enim, condimentum eget,",
         "body": "parturient montes, nascetur ridiculus mus. Donec dignissim magna a tortor. Nunc commodo auctor velit. Aliquam nisl. Nulla eu neque pellentesque massa lobortis ultrices. Vivamus rhoncus. Donec",
-        "publishedAt": "2026-10-28 16:11:40",
+        "publishedAt": "2026-10-28",
         "userId": 13
     },
     {
         "id": 8,
         "title": "cursus luctus,",
         "body": "eu dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eget magna. Suspendisse tristique neque venenatis lacus. Etiam",
-        "publishedAt": "2024-03-30 06:12:14",
+        "publishedAt": "2024-03-30",
         "userId": 19
     },
     {
         "id": 9,
         "title": "sagittis felis. Donec tempor,",
         "body": "Maecenas ornare egestas ligula. Nullam feugiat placerat velit. Quisque varius. Nam porttitor scelerisque neque. Nullam nisl. Maecenas malesuada fringilla",
-        "publishedAt": "2024-03-31 04:59:02",
+        "publishedAt": "2024-03-31",
         "userId": 7
     },
     {
         "id": 10,
         "title": "Sed molestie. Sed id",
         "body": "ligula. Aliquam erat volutpat. Nulla dignissim.",
-        "publishedAt": "2026-12-03 01:14:06",
+        "publishedAt": "2026-12-03 01",
         "userId": 1
     },
     {
         "id": 11,
         "title": "non quam. Pellentesque habitant",
         "body": "velit. Pellentesque ultricies dignissim lacus. Aliquam",
-        "publishedAt": "2026-09-18 05:08:26",
+        "publishedAt": "2026-09-18",
         "userId": 14
     },
     {
         "id": 12,
         "title": "Sed auctor",
         "body": "Nullam velit dui, semper et, lacinia vitae, sodales",
-        "publishedAt": "2026-01-21 03:02:26",
+        "publishedAt": "2026-01-21",
         "userId": 4
     },
     {
         "id": 13,
         "title": "Phasellus ornare. Fusce",
         "body": "Nullam enim. Sed nulla ante, iaculis nec, eleifend non, dapibus rutrum, justo.",
-        "publishedAt": "2025-06-16 04:54:25",
+        "publishedAt": "2025-06-16",
         "userId": 6
     },
     {
         "id": 14,
         "title": "pellentesque massa",
         "body": "mauris, rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet, sem ut cursus luctus, ipsum leo elementum sem, vitae",
-        "publishedAt": "2024-10-10 21:52:32",
+        "publishedAt": "2024-10-10",
         "userId": 15
     },
     {
         "id": 15,
         "title": "in sodales",
         "body": "sed orci lobortis augue scelerisque mollis. Phasellus libero mauris, aliquam eu, accumsan sed, facilisis vitae, orci. Phasellus dapibus quam quis diam. Pellentesque habitant morbi",
-        "publishedAt": "2025-01-15 08:38:33",
+        "publishedAt": "2025-01-15  08:38:33",
         "userId": 20
     },
     {

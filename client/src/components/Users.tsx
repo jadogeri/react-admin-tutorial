@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, Datagrid, TextField, EmailField, DeleteButton } from 'react-admin';
+import { List, Datagrid, TextField, EmailField, DeleteButton, Edit, SimpleForm, TextInput, Create, NumberInput } from 'react-admin';
 
 export const UserList = () => {
     return (
@@ -14,5 +14,31 @@ export const UserList = () => {
               <DeleteButton />
             </Datagrid>
         </List>
+    )
+}
+
+export const UserEdit = () => {
+    return (
+        <Edit>
+            <SimpleForm>
+                <TextInput disabled source="id" />
+                <TextInput source="name" />
+                <TextInput source="username" />
+                <TextInput source="email" />
+            </SimpleForm>
+        </Edit>
+    )
+}
+
+export const UserCreate = () => {
+    return (
+        <Create title='Create User'>
+            <SimpleForm>
+                <TextInput source="name" />
+                <TextInput source="username" />
+                <TextInput source="email" />
+        
+            </SimpleForm>
+        </Create>
     )
 }

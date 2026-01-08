@@ -8,7 +8,8 @@ import cors from 'cors';
 import path from 'path';
 import { AppDataSource } from './data-source';
 import { UserController } from './user/user.controller';
-import { range } from "./range";
+import { userRange } from "./userRange";
+import { postRange } from "./postRange";
 import PostController from "./post/post.controller";
 
 const app: Application= express();
@@ -19,12 +20,13 @@ const PORT = process.env.PORT || 4000;
 AppDataSource.initialize()
     .then(() => {
         console.log("Data Source has been initialized!");
-
+        
         app.use(express.json());
 
         app.use(cors(corsOptions))
         app.use(cors({ origin: '*' }));
-        app.use(range)
+        app.use(userRange);
+        app.use(postRange);
         // app.options('*', cors(corsOptions)); // Enable pre-flight for all routes
 
         //app.use(range);
@@ -33,7 +35,7 @@ AppDataSource.initialize()
         const userController = new UserController();
         app.get('/home', (req: Request, res: Response) => {
           res.send('Hello World from Express with TypeScript and ESM!');
-        });        
+        });         
 
         // Define user routes
         app.get("/users", userController.all);
@@ -54,7 +56,7 @@ AppDataSource.initialize()
         app.delete("/posts/truncate", postController.truncate);
         // Serve static files from the React app
         const buildPath = path.join(__dirname, '../..', 'client', 'build');  console.log('Build Path:', buildPath);
-        app.use(express.static(buildPath));   
+        app.use(express.static(buildPath));         
 
 
         app.listen(4000, () => {

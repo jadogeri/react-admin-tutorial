@@ -42,9 +42,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "overrides": {
-  "@types/react": "19.x.x",
-  "@types/react-dom": "19.x.x"
-}
+  }
+
 }
