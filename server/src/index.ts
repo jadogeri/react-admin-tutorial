@@ -1,6 +1,8 @@
 import "reflect-metadata"; 
+import * as dotenv from 'dotenv';
+dotenv.config();
 import express, {Application, NextFunction, Request, Response} from 'express';
-import { corsOptions } from './cors.config';
+import { corsOptionsConfig } from './cors.config';
 import { CorsOptions } from 'cors';
 // Must be the first line of the file
 
@@ -13,6 +15,8 @@ import { userRange } from "./userRange";
 import { postRange } from "./postRange";
 import PostController from "./post/post.controller";
 
+const reactAppBaseUrl = process.env.REACT_APP_BASE_URL;;
+
 const app: Application= express();
 const PORT = process.env.PORT || 4000;
 
@@ -24,7 +28,7 @@ AppDataSource.initialize()
         
         app.use(express.json());
 
-        app.use(cors(corsOptions))
+        app.use(cors(corsOptionsConfig(reactAppBaseUrl)))
         app.use(cors({ origin: '*' }));
         app.use(userRange);
         app.use(postRange);

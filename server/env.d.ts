@@ -19,6 +19,7 @@ declare global {
             ROOT_USERNAME: string;
             ROOT_EMAIL: string;
             ROOT_PASSWORD: string;
+            REACT_APP_BASE_URL: string;
         }
     }
 }
