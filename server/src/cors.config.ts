@@ -3,7 +3,7 @@ import { CorsOptions } from 'cors';
 export const corsOptionsConfig = (url? :string): CorsOptions => {
   // Add a list of allowed origins (e.g., your frontend application's URL)
   const reactAppBaseUrl = url? url : 'http://localhost:3000';
-  const allowedOrigins = [reactAppBaseUrl, 'https://www.yourapp.com', '*'];
+  const allowedOrigins = [reactAppBaseUrl];
   const corsOptions: CorsOptions = {
     origin: allowedOrigins, // The origin option can also be a function for dynamic origins
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Specify allowed methods
