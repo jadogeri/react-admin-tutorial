@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .early.coverage
+
+#environment variable file
+.env
