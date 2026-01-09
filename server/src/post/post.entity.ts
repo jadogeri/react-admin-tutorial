@@ -11,8 +11,11 @@ export class Post {
     @Column({ type: "varchar", length: 300, unique: false, default: "" })
     body: string;
 
-    @Column({ type: "datetime" })
-    publishedAt: Date;
+   @Column({
+    type: "date",
+    default: () => "CURRENT_DATE" // SQLite native function for YYYY-MM-DD
+    })
+    publishedAt: string;
 
     // 1. Manually add this column to store the ID
     @Column({ type: "number" })

@@ -14,6 +14,8 @@ function App() {
           list={UserList} 
           edit={UserEdit}
           create={UserCreate}
+        recordRepresentation={(user) => user.username}
+
         />
         <Resource 
           name="posts" 

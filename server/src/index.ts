@@ -4,6 +4,7 @@ import { corsOptions } from './cors.config';
 import { CorsOptions } from 'cors';
 // Must be the first line of the file
 
+
 import cors from 'cors';
 import path from 'path';
 import { AppDataSource } from './data-source';
@@ -27,7 +28,7 @@ AppDataSource.initialize()
         app.use(cors({ origin: '*' }));
         app.use(userRange);
         app.use(postRange);
-        app.use(cors({ exposedHeaders: ['Content-Range'] }));
+       // app.use(cors({ exposedHeaders: ['Content-Range'] }));
         // app.options('*', cors(corsOptions)); // Enable pre-flight for all routes
 
         //app.use(range);
@@ -57,7 +58,8 @@ AppDataSource.initialize()
         app.delete("/posts/truncate", postController.truncate);
         // Serve static files from the React app
         const buildPath = path.join(__dirname, '../..', 'client', 'build');  console.log('Build Path:', buildPath);
-        app.use(express.static(buildPath));         
+        app.use(express.static(buildPath));  
+               
 
 
         app.listen(4000, () => {

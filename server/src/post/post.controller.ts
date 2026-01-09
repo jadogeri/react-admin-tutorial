@@ -7,14 +7,18 @@ export class PostController {
     private postRepository = AppDataSource.getRepository(Post);
 
     all = async (request: Request, response: Response) => {
-        const posts = await this.postRepository.find();
+        // 1. Always use findAndCount for accurate pagination
+        const [posts, total] = await this.postRepository.findAndCount();
+        
+        // 2. Calculate the range correctly: 0 to (length - 1)
+        const rangeStart = 0;
+        const rangeEnd = posts.length > 0 ? posts.length - 1 : 0;
 
-        response.set('Content-Range', `posts 0-9/100`); // Required for pagination
-
-        //response.set('Content-Range', `posts 0-${posts.length}/${posts.length}`); // Required for pagination
-        response.setHeader('Access-Control-Expose-Headers', 'Content-Range');   
+        response.set('Content-Range', `posts ${rangeStart}-${rangeEnd}/${total}`);
+        response.setHeader('Access-Control-Expose-Headers', 'Content-Range');
         response.send(posts);
     }
+
     
     one = async (request: Request, response: Response) => {
         const id = parseInt(request.params.id);
