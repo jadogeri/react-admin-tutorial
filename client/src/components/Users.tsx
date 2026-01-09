@@ -2,20 +2,28 @@ import React from 'react';
 import { List, Datagrid, TextField, EmailField, DeleteButton, Edit, SimpleForm, TextInput, Create, NumberInput } from 'react-admin';
 
 export const UserList = () => {
-    return (
-        <List>
-            <Datagrid rowClick="edit">
-              <TextField source="id" />
-              <TextField source="name" />
-              <TextField source="username" />
-              <EmailField source="email" />
-              {/* <TextField source="phone" />
-              <TextField source="company" /> */}
-              <DeleteButton />
-            </Datagrid>
-        </List>
-    )
-}
+  return (
+    <List>
+      <Datagrid
+        rowClick="edit"
+        sx={{
+          ".RaDatagrid-rowEven": {
+            backgroundColor: "lavender",
+          },
+          ".RaDatagrid-headerCell": {
+            backgroundColor: "MistyRose",
+          },
+        }}
+      >
+        <TextField source="id" />
+        <TextField source="name" />
+        <TextField source="username" />
+        <EmailField source="email" />
+        <DeleteButton />
+      </Datagrid>
+    </List>
+  );
+};
 
 export const UserEdit = () => {
     return (

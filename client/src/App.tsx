@@ -3,6 +3,8 @@ import restProvider from 'ra-data-simple-rest'
 import { UserCreate, UserEdit, UserList } from './components/Users';
 import { authProvider } from './AuthProvider';
 import { PostList, PostEdit, PostCreate } from './components/Posts';
+import PeopleIcon from "@mui/icons-material/People";
+import ArticleIcon from "@mui/icons-material/Article";
 
 const dataProvider = restProvider('http://localhost:4000');
 
@@ -14,7 +16,8 @@ function App() {
           list={UserList} 
           edit={UserEdit}
           create={UserCreate}
-        recordRepresentation={(user) => user.username}
+          recordRepresentation={(user: any) => user.name}
+          icon={PeopleIcon}
 
         />
         <Resource 
@@ -22,6 +25,7 @@ function App() {
           list={PostList} 
           edit={PostEdit}
           create={PostCreate}
+          icon={ArticleIcon}
         />
       </Admin>
     );
