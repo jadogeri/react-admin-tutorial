@@ -6,7 +6,9 @@ import { PostList, PostEdit, PostCreate } from './components/Posts';
 import PeopleIcon from "@mui/icons-material/People";
 import ArticleIcon from "@mui/icons-material/Article";
 
-const dataProvider = restProvider('http://localhost:4000');
+const api_url = process.env.REACT_APP_API_URL || 'http://localhost:4000';
+console.log('API URL:', api_url); 
+const dataProvider = restProvider(api_url);
 
 function App() {
     return (
