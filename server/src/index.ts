@@ -44,22 +44,22 @@ AppDataSource.initialize()
         });         
 
         // Define user routes
-        app.get("/users", userController.all);
-        app.get("/users/:id", userController.one);
-        app.post("/users", userController.save);
-        app.post("/users/load", userController.load);
-        app.put("/users/:id", userController.update);
-        app.delete("/users/:id", userController.remove);
-        app.delete("/users/truncate", userController.truncate);
+        app.get("/api/users", userController.all);
+        app.get("/api/users/:id", userController.one);
+        app.post("/api/users", userController.save);
+        app.post("/api/users/load", userController.load);
+        app.put("/api/users/:id", userController.update);
+        app.delete("/api/users/:id", userController.remove);
+        app.delete("/api/users/truncate", userController.truncate);
         // Define post routes
         const postController = new PostController();
-        app.get("/posts", postController.all);
-        app.get("/posts/:id", postController.one);
-        app.post("/posts", postController.save);
-        app.post("/posts/load", postController.load);
-        app.put("/posts/:id", postController.update);
-        app.delete("/posts/:id", postController.remove);
-        app.delete("/posts/truncate", postController.truncate);
+        app.get("/api/posts", postController.all);
+        app.get("/api/posts/:id", postController.one);
+        app.post("/api/posts", postController.save);
+        app.post("/api/posts/load", postController.load);
+        app.put("/api/posts/:id", postController.update);
+        app.delete("/api/posts/:id", postController.remove);
+        app.delete("/api/posts/truncate", postController.truncate);
         // Serve static files from the React app
         const buildPath = path.join(__dirname, '../..', 'client', 'build');  console.log('Build Path:', buildPath);
         app.use(express.static(buildPath));  
